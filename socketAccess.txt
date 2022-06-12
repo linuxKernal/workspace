@@ -1,0 +1,7 @@
+netstat -tulpn
+nohup python3 workspace/socketPythonLinux/server.py > ~/.proxy.log 2>&1 &
+python3 workspace/socketPythonLinux/client.py
+gnome-terminal -- sh -c "locate log"
+
+nohup python3 /home/rootuser/Desktop/workspace/socketPythonLinux/server.py > ~/.proxy.log 2>&1 &
+clear
